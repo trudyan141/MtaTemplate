@@ -7,7 +7,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/reactjs-template/',
+  base: '/',
   plugins: [react(), tsconfigPaths()],
   // Uncomment the next lines in case, you would like to run Vite dev server using HTTPS and in case,
   // you have key and certificate. You retrieve your certificate and key using mkcert.

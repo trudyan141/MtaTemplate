@@ -20,6 +20,9 @@ dependencies:
   '@tonconnect/ui-react':
     specifier: ^2.0.2
     version: 2.0.2(react-dom@18.3.1)(react@18.3.1)
+  dotenv:
+    specifier: ^16.4.5
+    version: 16.4.5
   eruda:
     specifier: ^3.0.1
     version: 3.0.1
@@ -1612,6 +1615,11 @@ packages:
     dependencies:
       esutils: 2.0.3
     dev: true
+
+  /dotenv@16.4.5:
+    resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
+    engines: {node: '>=12'}
+    dev: false
 
   /email-addresses@5.0.0:
     resolution: {integrity: sha512-4OIPYlA6JXqtVn8zpHpGiI7vE6EQOAg16aGnDMIAlZVinnoZ8208tW1hAbjWydgN/4PLTT9q+O1K6AH/vALJGw==}
