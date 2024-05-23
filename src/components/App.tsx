@@ -1,3 +1,4 @@
+import { AppRoot } from '@telegram-apps/telegram-ui';
 import { useIntegration } from '@tma.js/react-router-integration';
 import {
   bindMiniAppCSSVars,
@@ -8,8 +9,7 @@ import {
   useThemeParams,
   useViewport,
 } from '@tma.js/sdk-react';
-import { AppRoot } from '@telegram-apps/telegram-ui';
-import { type FC, useEffect, useMemo } from 'react';
+import { useEffect, useMemo, type FC } from 'react';
 import {
   Navigate,
   Route,
@@ -57,7 +57,7 @@ export const App: FC = () => {
       <Router location={location} navigator={reactNavigator}>
         <Routes>
           {routes.map((route) => <Route key={route.path} {...route} />)}
-          <Route path='*' element={<Navigate to='/'/>}/>
+          <Route path='*' element={<Navigate to='/' />} />
         </Routes>
       </Router>
     </AppRoot>
