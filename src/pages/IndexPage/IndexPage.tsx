@@ -10,7 +10,7 @@ import './IndexPage.css';
 export const IndexPage: FC = () => {
   return (
     <List>
-      Trung test aaa
+      Trung test aaabbb
       <Section
         header='Features'
         footer='You can use these pages to learn more about features, provided by Telegram Mini Apps and other useful projects'
