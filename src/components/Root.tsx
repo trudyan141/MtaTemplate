@@ -32,10 +32,10 @@ const Inner: FC = () => {
       import('eruda').then((lib) => lib.default.init());
     }
   }, [debug]);
-
+  const  twaReturnUrl = 'https://t.me/tru_dev_bot/demo_app_dev'
   return (
     <TonConnectUIProvider manifestUrl={manifestUrl}  actionsConfiguration={{
-              twaReturnUrl: 'https://t.me/trudyanBot/demoapp'
+              twaReturnUrl: twaReturnUrl
           }}>
       <SDKProvider acceptCustomStyles debug={debug}>
         <App />

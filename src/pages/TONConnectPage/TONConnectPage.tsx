@@ -1,5 +1,3 @@
-import { useUtils } from '@tma.js/sdk-react';
-import { TonConnectButton, useTonWallet } from '@tonconnect/ui-react';
 import {
   Avatar,
   Cell,
@@ -9,6 +7,8 @@ import {
   Text,
   Title,
 } from '@telegram-apps/telegram-ui';
+import { useUtils } from '@tma.js/sdk-react';
+import { TonConnectButton, useTonWallet } from '@tonconnect/ui-react';
 import type { FC } from 'react';
 
 import { DisplayData } from '@/components/DisplayData/DisplayData.tsx';
@@ -17,7 +17,9 @@ import './TONConnectPage.css';
 
 export const TONConnectPage: FC = () => {
   const wallet = useTonWallet();
+  console.log("🚀 ~ wallet:", wallet)
   const utils = useUtils();
+  console.log("🚀 ~ utils:", utils)
 
   if (!wallet) {
     return (
