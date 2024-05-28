@@ -34,7 +34,9 @@ const Inner: FC = () => {
   }, [debug]);
 
   return (
-    <TonConnectUIProvider manifestUrl={manifestUrl}>
+    <TonConnectUIProvider manifestUrl={manifestUrl}  actionsConfiguration={{
+              twaReturnUrl: 'https://t.me/trudyanBot/demoapp'
+          }}>
       <SDKProvider acceptCustomStyles debug={debug}>
         <App />
       </SDKProvider>
