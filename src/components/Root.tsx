@@ -42,7 +42,8 @@ const Inner: FC = () => {
   console.log("🚀 ~ twaReturnUrl:", twaReturnUrl)
   return (
     <TonConnectUIProvider manifestUrl={manifestUrl} actionsConfiguration={{
-      twaReturnUrl:twaReturnUrl,
+      twaReturnUrl: twaReturnUrl,
+      // returnStrategy: 'back',
     }}>
       <SDKProvider acceptCustomStyles debug={debug}>
         <App />
