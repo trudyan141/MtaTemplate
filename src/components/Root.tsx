@@ -41,7 +41,9 @@ const Inner: FC = () => {
   const  twaReturnUrl = import.meta.env.VITE_TWA_RETURN_URL || 'https://t.me/tru_dev_bot/demo_app_dev' //'https://t.me/tru_dev_bot/demo_app_dev'
   console.log("🚀 ~ twaReturnUrl:", twaReturnUrl)
   return (
-    <TonConnectUIProvider manifestUrl={manifestUrl}>
+    <TonConnectUIProvider manifestUrl={manifestUrl} actionsConfiguration={{
+      twaReturnUrl:twaReturnUrl,
+    }}>
       <SDKProvider acceptCustomStyles debug={debug}>
         <App />
         {/* <AppBrowser></AppBrowser> */}
