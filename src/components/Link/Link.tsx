@@ -1,4 +1,4 @@
-// import { classNames, useUtils } from '@tma.js/sdk-react';
+import { classNames, useUtils } from '@tma.js/sdk-react';
 import { useCallback, type FC, type MouseEventHandler } from 'react';
 import { Link as RouterLink, type LinkProps } from 'react-router-dom';
 
@@ -10,7 +10,7 @@ export const Link: FC<LinkProps> = ({
   to,
   ...rest
 }) => {
-  //const utils = useUtils();
+  const utils = useUtils();
 
   const onClick = useCallback<MouseEventHandler<HTMLAnchorElement>>((e) => {
     propsOnClick?.(e);
@@ -30,18 +30,18 @@ export const Link: FC<LinkProps> = ({
     const isExternal = targetUrl.protocol !== currentUrl.protocol
       || targetUrl.host !== currentUrl.host;
 
-    // if (isExternal) {
-    //   e.preventDefault();
-    //   return utils.openLink(targetUrl.toString());
-    // }
-  }, [to, propsOnClick]);
+    if (isExternal) {
+      e.preventDefault();
+      return utils.openLink(targetUrl.toString());
+    }
+  }, [to, propsOnClick, utils]);
 
   return (
     <RouterLink
       {...rest}
       to={to}
       onClick={onClick}
-      className='link'
+      className={classNames(className, 'link')}
     />
   );
 };
