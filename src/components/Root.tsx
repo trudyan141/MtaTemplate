@@ -1,9 +1,9 @@
 import { App } from '@/components/App.tsx';
+// import { AppBrowser } from '@/components/AppBrowser.tsx';
+import { ErrorBoundary } from '@/components/ErrorBoundary.tsx';
 import { SDKProvider } from '@tma.js/sdk-react';
 import { TonConnectUIProvider } from '@tonconnect/ui-react';
 import { useEffect, useMemo, type FC } from 'react';
-//import { AppBrowser } from '@/components/AppBrowser.tsx';
-import { ErrorBoundary } from '@/components/ErrorBoundary.tsx';
 
 const ErrorBoundaryError: FC<{ error: unknown }> = ({ error }) => (
   <div>

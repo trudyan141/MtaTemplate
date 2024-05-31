@@ -1,5 +1,5 @@
 {
-    "url": "https://tma.internal:443",
-    "name": "TON Demo",
+    "url": "https://tma.internal",
+    "name": "Test Demo",
     "iconUrl": "https://ton.vote/logo.png"
 }

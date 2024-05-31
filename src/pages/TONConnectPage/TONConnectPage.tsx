@@ -9,14 +9,14 @@ import {
   Title,
 } from '@telegram-apps/telegram-ui';
 
-import { TonConnectButton, useTonConnectUI, useTonWallet } from '@tonconnect/ui-react';
+import { TonConnectButton, useTonWallet } from '@tonconnect/ui-react';
 import type { FC, } from 'react';
 
 import './TONConnectPage.css';
 
 export const TONConnectPage: FC = () => {
 
-  const [tonConnectUI] = useTonConnectUI();
+
   const wallet = useTonWallet();
   console.log("🚀 ~ walletAAA:", wallet)
   const handleOpenNewTab = (url: string) => {
